@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val btn = findViewById(R.id.button1) as Button
         btn.setOnClickListener {
-            toast("Hello ${nam.text}");
+            toast("Hello ${nam.text}!");
         }
     }
 }
