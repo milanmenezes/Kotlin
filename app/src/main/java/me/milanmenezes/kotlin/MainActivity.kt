@@ -25,29 +25,104 @@ class MainActivity : AppCompatActivity() {
         return (a.toFloat()/b)
     }
 
+    fun findavg(a:Int, b:Int):Float{
+        return ((a+b).toFloat())/2
+    }
+
+    fun findmax(a:Int, b:Int):Int {
+        if(a>b){
+            return a
+        }
+
+        else
+        {
+            return b
+        }
+    }
+
+    fun findmin(a:Int, b:Int):Int {
+        if(a<b){
+            return a
+        }
+
+        else
+        {
+            return b
+        }
+    }
+
+    fun check():Boolean{
+        return !(editText1.text.toString().trim()=="" || editText2.text.toString().trim()=="")
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         button1.setOnClickListener {
-            toast("The sum is "+findsum(editText1.text.toString().toInt(),editText2.text.toString().toInt())+"!")
+            if(check()) {
+                ans.text=findsum(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+            }
 
+            else
+                toast("Enter both numbers!")
         }
 
         button2.setOnClickListener {
-            toast("The remainder is "+findsub(editText1.text.toString().toInt(),editText2.text.toString().toInt())+"!")
-//
+            if (check())
+                ans.text=findsub(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+
+            else
+                toast("Enter both numbers!")
+
         }
 
         button3.setOnClickListener {
-            toast("The product is "+findmul(editText1.text.toString().toInt(),editText2.text.toString().toInt())+"!")
-//
+            if (check())
+                ans.text=findmul(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+
+            else
+                toast("Enter both numbers!")
         }
 
         button4.setOnClickListener {
-            toast("The quotient is "+finddiv(editText1.text.toString().toInt(),editText2.text.toString().toInt())+"!")
-//
+            if (check()){
+                if (!(editText2.text.toString().equals("0")))
+                ans.text=finddiv(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+                else {
+                    ans.text="Infinity"
+                    toast("Cannot divide by zero")
+                }
+            }
+            else
+                toast("Enter both numbers!")
         }
+
+        button5.setOnClickListener {
+            if (check())
+                ans.text=findmax(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+            else
+                toast("Enter both numbers!")
+
+        }
+
+        button6.setOnClickListener {
+            if (check())
+                ans.text=findmin(editText1.text.toString().toInt(),editText2.text.toString().toInt()).toString()
+            else
+                toast("Enter both numbers!")
+
+        }
+
+        button7.setOnClickListener {
+                if (check()) {
+                        ans.text = findavg(editText1.text.toString().toInt(), editText2.text.toString().toInt()).toString()
+                }
+                else
+                    toast("Enter both numbers!")
+        }
+
+
     }
 }
