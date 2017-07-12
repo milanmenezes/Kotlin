@@ -1,13 +1,20 @@
 package me.milanmenezes.kotlin
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
+
+
+
 
     fun findsum(a:Int, b:Int):Int{
         return a+b
@@ -122,6 +129,18 @@ class MainActivity : AppCompatActivity() {
                 else
                     toast("Enter both numbers!")
         }
+
+
+        button8.setOnClickListener({
+
+//                     var shrpref:SharedPreferences = getSharedPreferences("MyPref", MODE_PRIVATE)
+//                    var editor:SharedPreferences.Editor = shrpref.edit()
+//                    editor.putString("Name",editText1.text.toString())
+//                    editor.commit()
+
+                     startActivity(intentFor<second>())
+
+        })
 
 
     }

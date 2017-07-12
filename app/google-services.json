@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "887517552741",
+    "firebase_url": "https://holyfamilychurch-bd181.firebaseio.com",
+    "project_id": "holyfamilychurch-bd181",
+    "storage_bucket": "holyfamilychurch-bd181.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887517552741:android:3e865e3afe6736b7",
+        "android_client_info": {
+          "package_name": "me.milanmenezes.kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887517552741-s76uppafimk6t5nn4kpkriv8rbp921i0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.milanmenezes.kotlin",
+            "certificate_hash": "097a9ff516cb0bd1d678086d53c82ff76faa9904"
+          }
+        },
+        {
+          "client_id": "887517552741-nc3ukjbfhrjhvfhouhtmv8aeai9erp51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq2FBriincQlY5CQFCimX3mDcx-E5nlus"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887517552741-nc3ukjbfhrjhvfhouhtmv8aeai9erp51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
