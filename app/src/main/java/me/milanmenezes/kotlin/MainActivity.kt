@@ -133,14 +133,19 @@ class MainActivity : AppCompatActivity() {
 
         button8.setOnClickListener({
 
-//                     var shrpref:SharedPreferences = getSharedPreferences("MyPref", MODE_PRIVATE)
-//                    var editor:SharedPreferences.Editor = shrpref.edit()
-//                    editor.putString("Name",editText1.text.toString())
-//                    editor.commit()
+
+
+            val obj1:JSONObject = JSONObject("{\"hello\":\"world\"}")
+            var shrpref:SharedPreferences = getSharedPreferences("MyPref", MODE_PRIVATE)
+            var editor:SharedPreferences.Editor = shrpref.edit()
+            editor.putString("JSON",obj1.toString())
+            editor.commit()
 
                      startActivity(intentFor<second>())
 
         })
+
+
 
 
     }

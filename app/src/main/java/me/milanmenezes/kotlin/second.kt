@@ -27,12 +27,12 @@ class second : AppCompatActivity() {
 //       var abc:String = shrpref.getString("Name","0").toString()
 
 
-        val abc:String = "Hello"
 
 
+        var shrpref:SharedPreferences = getSharedPreferences("MyPref", MODE_PRIVATE)
+        var json:JSONObject= JSONObject(shrpref.getString("JSON",null))
 
-
-        secondtxt.setText(abc)
+        secondtxt.setText(json.getString("hello"))
 
 
     }
